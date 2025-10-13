@@ -42,7 +42,7 @@ app.get('/products/:id', (req, res) => {
     if (getSingleProduct) {
         res.json(getSingleProduct);
     } else {
-        res.status(404).json({ message: 'Product not found'});
+        res.status(404).json({ 404: 'Product not found'});
     }
 });
 
