@@ -12,15 +12,17 @@ const myFirstMiddleWare = (req, res, next) => {
 
 app.use(myFirstMiddleWare);
 
+// Route handlers
 app.get('/', (req, res) => {
-    res.send('Homepage')
+  res.json('Homepage');
 });
 
 app.get('/about', (req, res) => {
-    res.send('About page')
+  res.json('About page');
 });
 
+// Start server
 const port = 3000;
 app.listen(port, () => {
-    console.log(`server is running at port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
