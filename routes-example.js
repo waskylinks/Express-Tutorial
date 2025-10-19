@@ -7,10 +7,6 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Home page');
 })
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`server is running at port ${port}`);
-});
 
 // to get all products
 app.get('/products', (req, res) => {
@@ -46,3 +42,8 @@ app.get('/products/:id', (req, res) => {
     }
 });
 
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`server is running at port ${port}`);
+});
